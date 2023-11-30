@@ -37,7 +37,7 @@ class Assign(forms.Form):
         super(Assign, self).__init__(*args, **kwargs)
 
         # Filtra los usuarios por el grupo con ID 3
-        group_id = 3  # Reemplaza con el ID de tu grupo específico
+        group_id = 2  # Reemplaza con el ID de tu grupo específico
         self.fields['user_id'] = forms.ModelChoiceField(
             queryset=User.objects.filter(groups__id=group_id).distinct(),
             empty_label="Selecciona un usuario",
